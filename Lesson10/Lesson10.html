@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EXPERIMENT NO:2</title>
+</head>
+<body>
+
+<h1>Creating Forms</h1>
+
+<form method="POST" action="form.aspx" >
+
+<p>
+  <label>Customer name: <input type="text" id="customerName" name="customerName" maxlength="10" >
+</p>
+
+<fieldset>
+  <legend>Pizza Size</legend>
+  <p><label> <input type="radio" name="size" value="small"> Small (10 inch)</label></p>
+  <p><label> <input type="radio" name="size" value="medium" checked> Medium (12 inch)</label></p>
+  <p><label> <input type="radio" name="size" value="large"> Large (14 inch)</label></p>
+
+</fieldset>
+
+<fieldset>
+  <legend>Pizza Toppings</legend>
+  <p><label> <input type="checkbox" name="toppings" value="bacon"> Bacon </label></p>
+  <p><label><input type="checkbox" name="toppings" value="cheese"> Extra Cheese</label></p>
+  <p><label> <input type="checkbox" name="toppings" value="onion" checked> Onion</label></p>
+  <p><label> <input type="checkbox" name="toppings" value="mushroom"> Mushroom</label></p>
+</fieldset>
+
+<p>Crust
+<select name="crust" multiple>
+  <option value="c1">Normal</option>
+  <option value="c2" selected>Chicago Deep Dish (+ $2)</option>
+  <option value="c3">New York Thin</option>
+</select>
+</p>
+
+<p><label for="comments">Delivery Instructions:</label>
+  <textarea name="comments" cols="50" rows="5" maxlength="1000">
+  </textarea>
+
+</p>
+
+<p><input type="submit" value="Continue to Step 2"></p>
+<p><input type="reset" value="Reset Values"></p>
+
+</form>
+
+<form method="POST" action="form.aspx">
+
+  <h2>Email</h2>
+  <p><label><span>Email Input: </span><input type=email name=emailInput required></label></p>
+  
+  <h2>Telephone</h2>
+  <p><label><span>Telephone Input: </span><input type=tel name=telInput required></label>Oddly, the spec says the browser should do nothing special.  Hmm...</p>
+  
+  <h2>URL</h2>
+  <p><label><span>URL Input: </span><input type=url name=urlInput required></label></p>
+  
+  <h2>Numeric Values</h2>
+  
+  <p><label><span>Number Input: </span><input type=number name=numberInput required></label></p>
+  
+  <p><label><span>Range Input: </span><input type=range name=rangeInput required value=42></label>Value set to 42.  By default, values between 0 and 100</p>
+  
+  <h2>Data List</h2>
+  <p><label><span>Data List: </span>
+  <input type=text list=someList>
+  <datalist id=someList>
+    <option label=First value="First">
+    <option label=Second value="Second">
+    <option label=Third value="Third">
+  </datalist>
+  </label></p>
+  
+  <h2>Attributes</h2>
+  
+  <p><label><span>autofocus: </span><input type=text autofocus></label></p>
+  <p><label><span>pattern: </span><input type=text pattern="^\d{5}(-\d{4})?$"></label>Hint: Use a valid/invalid zip code</p>
+  <p><label><span>placeholder: </span><input type=text placeholder="Hello World"></label></p>
+  <p><label><span>required: </span><input type=text required></label></p>
+  <p><label><span>step: </span><input type=number step=5></label>Hint: Must be divisible by 5</p>
+  
+  <p><button>Submit</button></p>
+  
+  </form>
+  <section>
+    <table width="70%" border="2px">
+      <thead>
+        <tr>
+          <th width="300">C++</th>
+          <th width="300">Python</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            C++ tends to have large lines of code.
+          </td>
+          <td>
+            Python has less lines of code
+          </td>
+        </tr>
+        <tr>
+          <td>
+            C++ doesn’t support garbage collection.
+          </td>
+          <td>
+            Python supports garbage collection
+          </td>
+
+
+        </tr>
+        <tr>
+          <td>
+            C++ has a stiff learning curve as it has lots of predefined syntaxes and structure
+          </td>
+          <td>
+            Python is easy to remember almost similar to human language.
+          </td>
+
+
+        </tr>
+        <tr>
+          <td>
+            C++ is faster in speed as compared to python.
+          </td>
+          <td>
+            Python is slower since it uses interpreter and also determines the data type at run time.
+          </td>
+
+
+        </tr>
+        <tr>
+          <td>
+            Less clean and manageable in comparison to python
+          </td>
+          <td>
+            Rapid Prototyping is possible due to the small size of the code.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <h2>list-style-type</h2>
+
+  <ul>
+    <li style="list-style-type:none;">list-style-type:none;</li>
+    <li style="list-style-type:disc;">list-style-type:disc;</li>
+    <li style="list-style-type:circle;">list-style-type:circle;</li>
+    <li style="list-style-type:square;">list-style-type:square;</li>
+    <li style="list-style-type:decimal-leading-zero;">list-style-type:decimal-leading-zero;</li>
+    <li style="list-style-type:upper-roman;">list-style-type:upper-roman;</li>
+    <li style="list-style-type:upper-alpha;">list-style-type:upper-alpha;</li>
+    <li style="list-style-type:lower-alpha;">list-style-type:lower-alpha;</li>
+    <li style="list-style-type:lower-greek;">list-style-type:lower-greek;</li>
+  </ul>
+  
+  <ul>
+    <li style="list-style-position:outside;">list-style-position:outside;</li>
+    <li style="list-style-position:inside;">list-style-position:inside;</li>
+  </ul>
+
+
+  <h4>SELECT THE CITY</h4>
+  <select name="city">
+    <option value="Pune">Pune</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="navi Mumbai">Navi Mumbai</option>
+    <option value="Nagpur">Nagpur</option>
+  </select>
+  <p>Symbol</p>
+  <div>
+    <p style="font-size:70px">&#x23E9;</p>
+    <p style="font-size:70px">&#8986;</p>
+    <p style="font-size:70px">&#9918;</p>
+
+  </div>
+
+</body>
+</html>
